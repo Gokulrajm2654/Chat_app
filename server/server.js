@@ -7,7 +7,6 @@ import userRouter from "./routes/userRoutes.js";
 import messageRouter from "./routes/messageRoutes.js";
 import { Server } from "socket.io";
 
-const serverless = require('serverless-http');
 
 // Create Express app and HTTP server
 const app = express();
@@ -52,7 +51,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 
-export default indexedDB;
+export default server;
 
 
 
