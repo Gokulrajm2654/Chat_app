@@ -7,6 +7,8 @@ import userRouter from "./routes/userRoutes.js";
 import messageRouter from "./routes/messageRoutes.js";
 import { Server } from "socket.io";
 
+const serverless = require('serverless-http');
+
 // Create Express app and HTTP server
 const app = express();
 const server = http.createServer(app);
@@ -49,7 +51,7 @@ server.listen(PORT, () => console.log("Server is running on PORT: " + PORT));
 
 
 
-
+module.exports = serverless(app);
 
 
 
