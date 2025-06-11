@@ -6,7 +6,7 @@ import Sidebar from '../components/Sidebar';
 import { ChatContext } from '../../context/ChatContext';
 
 const HomePage = () => {
-    const { selectedUser } = useContext(ChatContext); // ✅ Fix here
+    const { selectedUser } = useContext(ChatContext)
 
     return (
         <div className='w-full h-screen sm:px-12 sm:py-6 bg-black'>
