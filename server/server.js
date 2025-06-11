@@ -43,6 +43,10 @@ app.use("/api/status", (req, res) => res.send("Server is live"));
 app.use("/api/auth", userRouter)
 app.use("/api/messages", messageRouter)
 
+app.get("/", (req, res) => {
+    res.send("Server is live")
+})
+
 await connectDB()
 
 if (process.env.NODE_ENV !== "production") {
