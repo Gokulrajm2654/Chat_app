@@ -15,6 +15,8 @@ export const ChatProvider = ({ children }) => {
 
     const getUsers = async () => {
         try {
+            const token = localStorage.getItem("token")
+            if (!token) return
             const { data } = await axios.get("/api/messages/users");
             console.log(data.users)
 
